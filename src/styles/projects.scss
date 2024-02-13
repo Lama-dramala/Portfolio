@@ -1,0 +1,76 @@
+@import "common/variables.scss";
+.projects {
+  scroll-margin-top: 85px;
+  padding-bottom: 500px;
+
+  &_container {
+    @include flex(center, center);
+  }
+
+  &_item {
+    width: 300px;
+    margin-right: 35px;
+    padding: 20px 25px;
+    background: linear-gradient(180deg, #576cbc -14.75%, #132a53 50.1%);
+    border-radius: 15px;
+
+    &_preview {
+      margin-bottom: 15px;
+      position: relative;
+
+      & img {
+        width: 300px;
+        display: block;
+        border-radius: 10px;
+      }
+
+      &_text {
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        background-color: rgb(15, 15, 15, 0.5);
+        overflow: hidden;
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: 0.3s;
+      }
+
+      &:hover &_text {
+        height: 100%;
+        padding-top: 65px;
+      }
+
+      &_title {
+        font-size: 22px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &_stack-list {
+      display: flex;
+      //   justify-content: space-between;
+      margin-bottom: 15px;
+
+      & li {
+        margin-right: 10px;
+        padding: 5px 10px;
+        background-color: rgb(22, 66, 127);
+        border-radius: 20px;
+      }
+    }
+
+    &_links {
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
