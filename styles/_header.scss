@@ -1,0 +1,36 @@
+header {
+    padding: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(4, 21, 45, 1);
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+
+    &_item{
+        margin-right: 50px;
+        font-size: 18px;
+        font-weight: bold;
+    
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width:470px){
+    header{
+        padding: 30px 10px;
+    }
+    .navigation_item{
+        margin-right: 30px;
+    }
+}
+@media (max-width:360px){
+    .navigation_item{
+        margin-right: 20px;
+        font-size: 16px;
+    }
+}

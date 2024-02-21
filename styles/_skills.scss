@@ -1,0 +1,39 @@
+.skills {  
+    &_icon-list {
+      @include flex(center, center);
+      flex-wrap: wrap;
+  
+      &_item {
+        @include flex(center, unset, column);
+        margin-right: 20px;
+  
+        &:last-child {
+          margin-right: 0;
+        }
+  
+        &_img-wrap {
+          @include flex(center, center);
+          width: 80px;
+          height: 80px;
+          margin-bottom: 15px;
+          background-color: rgba(25, 55, 109, 1);
+          border-radius: 50%;
+        }
+  
+        & img {
+          width: 50px;
+        }
+      }
+    }
+}
+
+@media (max-width:1000px){
+  .skills_icon-list_item{
+    margin-bottom: 20px;
+  }
+}
+@media (max-width:500px){
+  .skills_icon-list_item{
+    font-size: 14px;
+  }
+}
