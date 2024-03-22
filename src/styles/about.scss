@@ -1,0 +1,117 @@
+@import "common/variables.scss";
+
+.about {
+  @include flex(center, space-between);
+
+  &_text {
+    width: 600px;
+  }
+
+  &_title {
+    font-size: 48px;
+  }
+
+  &_description {
+    margin: 25px 0;
+    font-size: 20px;
+  }
+
+  &_btn {
+    padding: 18px 26px;
+  }
+}
+
+.skills {
+  &_icon-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    &_item {
+      @include flex(center, unset, column);
+
+      &_img-wrap {
+        @include flex(center, center);
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+        background-color: rgba(25, 55, 109, 1);
+        border-radius: 50%;
+      }
+
+      & img {
+        width: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .about {
+    flex-direction: column;
+
+    &_text {
+      margin-bottom: 30px;
+    }
+  }
+
+  .skills {
+    &_icon-list {
+      @include flex(center, center);
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .about {
+    &_text {
+      width: 450px;
+    }
+
+    &_title {
+      font-size: 35px;
+    }
+
+    &_description {
+      font-size: 18px;
+    }
+
+    &_btn {
+      padding: 14px 20px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    &_text {
+      width: 330px;
+    }
+
+    &_title {
+      font-size: 30px;
+    }
+
+    &_description {
+      font-size: 16px;
+    }
+
+    &_btn {
+      padding: 10px 15px;
+    }
+  }
+  .skills_icon-list_item {
+    font-size: 14px;
+  }
+}
+@media (max-width: 370px) {
+  .about {
+    &_text {
+      width: 280px;
+    }
+    &_title {
+      font-size: 24px;
+    }
+  }
+}
