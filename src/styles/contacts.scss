@@ -6,6 +6,7 @@
   }
 
   &_links-list {
+    margin-top: -70px;
     &_item {
       @include flex(center);
       margin-bottom: 10px;
@@ -70,8 +71,8 @@
     &_wrap {
       flex-direction: column-reverse;
     }
-    &_form {
-      margin-bottom: 40px;
+    &_links-list {
+      margin-top: 40px;
     }
   }
 }

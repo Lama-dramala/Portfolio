@@ -1,5 +1,4 @@
 import { MotionPortfolioItem } from "./PortfolioItem";
-import { motion } from "framer-motion";
 
 export default function Portfolio() {
   const projectList = [
