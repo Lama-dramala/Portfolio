@@ -55,8 +55,7 @@ export default function Portfolio() {
       y: 0,
       opacity: 1,
       transition: {
-        type: "tween",
-        // delay: 0.3,
+        delay: 0.5,
         duration: 1,
       },
     },

@@ -1,8 +1,9 @@
+@import "common/variables.scss";
+
 html {
   scroll-behavior: smooth;
 }
 body {
-  padding-bottom: 60px;
   position: relative;
   background-color: rgba(4, 21, 45, 1);
   color: #fff;
@@ -10,10 +11,14 @@ body {
 }
 section {
   max-width: 1300px;
+  min-height: 100vh;
+  @include flex(unset, center, column);
   padding: 25px 50px;
   margin: 0 auto;
-  scroll-margin-top: 70px;
-  overflow: hidden;
+  scroll-margin: 70px;
+  // clip похоже по свойствам на hidden, но с hidden не работает scroll-margin
+  overflow: clip;
+  box-sizing: border-box;
 }
 a:hover {
   text-decoration: underline;
