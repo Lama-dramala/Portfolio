@@ -1,4 +1,5 @@
-import PortfolioItem from "./PortfolioItem";
+import { MotionPortfolioItem } from "./PortfolioItem";
+import { motion } from "framer-motion";
 
 export default function Portfolio() {
   const projectList = [
@@ -46,6 +47,22 @@ export default function Portfolio() {
     },
   ];
 
+  const itemAnimation = {
+    hidden: {
+      y: 200,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "tween",
+        // delay: 0.3,
+        duration: 1,
+      },
+    },
+  };
+
   return (
     <section id="projectsSection" className="projects">
       <h3 className="section-title">My Projets</h3>
@@ -58,7 +75,14 @@ export default function Portfolio() {
       </div>
       <div className="projects_container">
         {projectList.map((item) => (
-          <PortfolioItem props={item} key={item.title} />
+          <MotionPortfolioItem
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={itemAnimation}
+            props={item}
+            key={item.title}
+          />
         ))}
       </div>
     </section>

@@ -1,6 +1,9 @@
-export default function PortfolioItem({ props }) {
+import { motion } from "framer-motion";
+import { forwardRef } from "react";
+
+export const PortfolioItem = forwardRef(({ props }, ref) => {
   return (
-    <div className="projects_item">
+    <div ref={ref} className="projects_item">
       <div className="projects_item_preview">
         <img src={"img/projects-preview/" + props.img} alt="Site Preview" />
         <div className="projects_item_preview_text">
@@ -21,4 +24,6 @@ export default function PortfolioItem({ props }) {
       </a>
     </div>
   );
-}
+});
+
+export const MotionPortfolioItem = motion(PortfolioItem);
