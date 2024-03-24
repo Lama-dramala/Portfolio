@@ -30,7 +30,7 @@
     }
 
     &_input {
-      margin: 5px 0 15px;
+      margin: 5px 0 25px;
       padding: 5px 10px;
       height: 30px;
       border-radius: 10px;
@@ -48,6 +48,13 @@
       &_error {
         margin-top: 5px;
         color: red;
+        transform: translateX(80%);
+        opacity: 0;
+        transition: 0.3s;
+        &.visible {
+          transform: translateX(0);
+          opacity: 1;
+        }
       }
     }
 

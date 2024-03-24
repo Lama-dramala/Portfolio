@@ -82,7 +82,9 @@ export const ContactForm = () => {
   return (
     <form ref={form} onSubmit={sendEmail} className="contact_form">
       <label className="contact_form_label">Your name</label>
-      {nameTouched && !nameIsValid && <div className="contact_form_input_error">Please write your name</div>}
+      <div className={"contact_form_input_error" + (nameTouched && !nameIsValid ? " visible" : "")}>
+        Please write your name
+      </div>
       <input
         value={nameValue}
         onChange={(e) => nameChangeHandler(e)}
@@ -92,9 +94,9 @@ export const ContactForm = () => {
         className="contact_form_input"
       />
       <label className="contact_form_label">Your Email</label>
-      {emailTouched && !emailIsValid && (
-        <div className="contact_form_input_error">Please write a correct Email</div>
-      )}
+      <div className={"contact_form_input_error" + (emailTouched && !emailIsValid ? " visible" : "")}>
+        Please write a correct Email
+      </div>
       <input
         value={emailValue}
         onChange={(e) => emailChangeHandler(e)}
@@ -104,9 +106,10 @@ export const ContactForm = () => {
         className="contact_form_input"
       />
       <label className="contact_form_label">Your message</label>
-      {messageTouched && !messageIsValid && (
-        <div className="contact_form_input_error">Please write your message</div>
-      )}
+      <div className={"contact_form_input_error" + (messageTouched && !messageIsValid ? " visible" : "")}>
+        Please write your message
+      </div>
+
       <textarea
         value={messageValue}
         onChange={(e) => messageChangeHandler(e)}
